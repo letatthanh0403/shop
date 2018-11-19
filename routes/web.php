@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('index','PageController@getIndex');
-route::get('product-type','PageController@getProductType');
+route::get('index','PageController@getIndex')->name('home');
+route::get('product-type/{type}','PageController@getProductType')->name('product-type');
 route::get('product','PageController@getProduct');
-route::get('contact','PageController@getContact');
+route::get('contact','PageController@getContact')->name('contact');
