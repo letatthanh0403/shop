@@ -16,6 +16,13 @@ Route::get('/', function () {
 });
 
 route::get('index','PageController@getIndex')->name('home');
-route::get('product-type/{type}','PageController@getProductType')->name('product-type');
-route::get('product','PageController@getProduct');
+
+
+route::get('product-types/{id}','PageController@getProductType')->name('product-type');
+
+
+route::get('products','PageController@getProduct');
+
+
+
 route::get('contact','PageController@getContact')->name('contact');
